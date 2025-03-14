@@ -1,0 +1,338 @@
+
+body {
+    background-color: #e9f1f7;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.sidebar {
+    height: 100vh;
+    background: #ffffff;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    position: fixed;
+    top: 65px;
+    left: 0; /* Visible by default on desktop */
+    width: 260px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    transition: left 0.3s ease-in-out;
+    z-index: 1050;
+}
+
+
+.sidebar.active {
+    left: 0;
+}
+
+.sidebar a {
+    color: #343a40;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 13px;
+}
+
+.sidebar a i {
+    margin-right: 10px;
+    font-size: 18px;
+    display: inline-block;
+}
+
+.sidebar a:hover {
+    background: #f0f0f0;
+}
+
+.card-header {
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+}
+
+.content {
+    margin-left: 260px;
+    padding: 20px;
+    margin-top: 80px;
+}
+
+.navbar-brand img {
+    height: 35px;
+    margin-right: 10px;
+}
+
+.navbar {
+    border-bottom: 1px solid #bcbcbce3;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background: white;
+    padding: 5px 30px;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.content h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.recent-orders {
+    max-width: 90%;
+    margin: 30px auto;
+}
+
+.profile-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin: 10px auto;
+}
+
+.navbar-profile-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.notification-icon {
+    position: relative;
+    margin-right: 20px;
+}
+
+.notification-icon .badge {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 5px 6px;
+    font-size: 10px;
+}
+
+.card {
+    border: none;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.card-body h3 {
+    font-size: 2rem;
+    color: #333;
+}
+
+.badge.bg-warning {
+    background-color: #ffc107 !important;
+    padding: 10px;
+}
+
+.badge.bg-success {
+    background-color: #28a745 !important;
+    padding: 10px;
+}
+
+.btn-sm {
+    font-size: 0.875rem;
+    padding: 0.25rem 0.5rem;
+}
+
+.hamburger {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        left: -260px;
+    }
+    .sidebar.active {
+        left: 0;
+    }
+    .hamburger {
+        display: block;
+    }
+    .content {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .sidebar {
+        width: 100%;
+        left: -100%;
+    }
+    .sidebar.active {
+        left: 0;
+    }
+    .navbar {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        height: auto;
+        padding: 10px 15px;
+    }
+    .navbar .ms-auto {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    .navbar-profile-img, .notification-icon {
+        width: 35px;
+        height: 35px;
+    }
+    .navbar span.fw-bold {
+        font-size: 14px;
+    }
+    .content {
+        margin-top: 70px;
+        padding: 10px;
+    }
+}
+
+.container-fluid form {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 480px) {
+    .container-fluid form {
+        width: 90%;
+        padding: 15px;
+    }
+}
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* Prevent scrollbar */
+}
+
+.container.mt-4 {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    margin: 0;
+    padding: 0;
+}
+
+.add_card {
+    width: 100%;
+    max-width: 500px; 
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 15px; /* Adjusted padding */
+    background-color: #ffffff; /* White background */
+    margin-left: 30rem; /* Center horizontally */
+}
+
+.card-header {
+    font-size: 1.1rem; /* Smaller font size */
+    font-weight: bold; /* Bold text */
+    color: black !important; /* Dark gray color */
+    text-align: center;
+    padding: 5px 0; /* Reduced padding for header */
+    border-bottom: 1px solid #e0e0e0; /* Subtle border */
+    background-color: transparent !important; /* Remove default background */
+}
+
+.form-control {
+    margin-bottom: 0.2rem; /* Reduced margin */
+    font-size: 12px; /* Smaller font size */
+    border: 1px solid #e0e0e0; /* Light border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 6px; /* Reduced padding inside inputs */
+}
+
+.form-control:focus {
+    border-color: #007bff; /* Blue border on focus */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.25); /* Subtle shadow on focus */
+}
+
+textarea.form-control {
+    height: 60px; /* Reduced textarea height */
+}
+
+.btn-primary {
+    background-color: #007bff; /* Bootstrap primary blue */
+    border: none; /* Remove border */
+    padding: 6px; /* Reduced padding inside button */
+    font-size: 13px; /* Smaller font size */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+.btn-primary:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+
+
+.main-container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Navbar se neeche space maintain */
+    min-height: 100vh; /* Pure screen par adjust hoga */
+    margin-top: 30px;
+    margin-left: 200px;
+}
+
+.product-table {
+    width: 80%; /* Responsive width */
+    max-width: 1100px; /* Maximum limit */
+}
+
+h2,p {
+    text-align: center; /* Heading center */
+}
+
+.table img {
+    
+    display: block;
+    margin: auto; /* Image ko center karna */
+}
+
+.btn-sm{
+    padding: 10px;
+    margin-left: 8px;
+    
+}
+
+.pagination-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 15px;
+}
